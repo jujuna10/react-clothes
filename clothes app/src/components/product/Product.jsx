@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import cart from '../../assets/cart.png'
 
-// const api = 'https://fakestoreapi.com/products'
+const api = 'https://fakestoreapi.com/products'
 // const api = 'https://api.escuelajs.co/api/v1/products'
-const api = "https://api.escuelajs.co/api/v1/products";
+// const api = "https://api.escuelajs.co/api/v1/products";
 
 
 // const fakeData = [
@@ -27,12 +27,12 @@ export default function Product({onBuy, name, click}) {
       const dataP = await respo.json()
       setData(dataP)
 
-    // useEffect(() => {
-    //   setData(fakeData);
-    //   setMens(fakeData.filter(item => item.category === "men's clothing"));
-    //   setWomens(fakeData.filter(item => item.category === "women's clothing"));
-    //   setJewelery(fakeData.filter(item => item.category === "jewelery"));
-    // }, []);
+    useEffect(() => {
+      setData(fakeData);
+      setMens(fakeData.filter(item => item.category === "men's clothing"));
+      setWomens(fakeData.filter(item => item.category === "women's clothing"));
+      setJewelery(fakeData.filter(item => item.category === "jewelery"));
+    }, []);
     
     }
     fetchData()
