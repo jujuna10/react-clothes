@@ -24,7 +24,7 @@ export default function ImageSlider() {
       const response = await fetch(api);
       const result = await response.json();
       setDataa(result);
-      setClothes(result.filter(item => item.category.name === "Clothes"));
+      setClothes(result.filter(item => item.category.name === "Shoesss"));
     };
     fetchData();
   }, []);
